@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Code With Disloyal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-pra">&lt;/&gt; Code With</span><span class="logo-roz"> Disloyal</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Type to Search">
+            <div class="search-suggestions" style="display: none;"></div>
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- Post Detail Section -->
+    <main class="post-detail-main">
+        <div class="post-detail-container">
+            <!-- Back Button -->
+            <a href="blog.html" class="back-button glass-card-mini">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+
+            <!-- Post Header -->
+            <article class="post-detail-article glass-card">
+                <div class="post-detail-header">
+                    <div class="post-category-badge">JavaScript</div>
+                    <h1 class="post-detail-title">Modern JavaScript ES6+ Features You Should Know</h1>
+
+                    <div class="post-detail-meta">
+                        <div class="post-author-info">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-details">
+                                <span class="author-name">Disloyal</span>
+                                <span class="author-role">Full Stack Developer</span>
+                            </div>
+                        </div>
+                        <div class="post-stats">
+                            <span class="post-date"><i class="far fa-calendar"></i> Dec 1, 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 5 min read</span>
+                            <span class="post-views"><i class="far fa-eye"></i> 1.2k views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Image -->
+                <div class="post-featured-image">
+                    <div class="post-image-placeholder-large">
+                        <i class="fab fa-js"></i>
+                    </div>
+                </div>
+
+                <!-- Post Content -->
+                <div class="post-detail-content">
+                    <p class="lead-paragraph">
+                        JavaScript has evolved significantly over the years, and ES6+ (ECMAScript 2015 and beyond)
+                        introduced
+                        powerful features that have transformed how we write modern JavaScript. In this comprehensive
+                        guide,
+                        we'll explore the essential features every developer should master.
+                    </p>
+
+                    <h2>1. Arrow Functions</h2>
+                    <p>
+                        Arrow functions provide a more concise syntax for writing function expressions. They also
+                        lexically bind
+                        the <code>this</code> value, making them particularly useful for callbacks and array methods.
+                    </p>
+                    <div class="code-block glass-card-mini">
+                        <pre><code>// Traditional function
+const add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+const add = (a, b) => a + b;
+
+// With array methods
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]</code></pre>
+                    </div>
+
+                    <h2>2. Destructuring Assignment</h2>
+                    <p>
+                        Destructuring allows you to extract values from arrays or properties from objects into distinct
+                        variables.
+                        This feature significantly reduces code verbosity and improves readability.
+                    </p>
+                    <div class="code-block glass-card-mini">
+                        <pre><code>// Object destructuring
+const user = { name: 'Disloyal', age: 25, role: 'Developer' };
+const { name, age } = user;
+
+// Array destructuring
+const colors = ['red', 'green', 'blue'];
+const [primary, secondary] = colors;
+
+// Function parameter destructuring
+function displayUser({ name, age }) {
+    console.log(`${name} is ${age} years old`);
+}</code></pre>
+                    </div>
+
+                    <h2>3. Template Literals</h2>
+                    <p>
+                        Template literals provide an easy way to create strings with embedded expressions. They support
+                        multi-line strings and string interpolation, making string manipulation more intuitive.
+                    </p>
+                    <div class="code-block glass-card-mini">
+                        <pre><code>const name = 'Disloyal';
+const greeting = `Hello, ${name}!
+Welcome to modern JavaScript.`;
+
+// Expression interpolation
+const a = 5;
+const b = 10;
+console.log(`Sum: ${a + b}`); // Sum: 15</code></pre>
+                    </div>
+
+                    <h2>4. Promises and Async/Await</h2>
+                    <p>
+                        Promises revolutionized asynchronous programming in JavaScript, and async/await syntax made it
+                        even
+                        more readable. These features are essential for handling API calls, file operations, and other
+                        asynchronous tasks.
+                    </p>
+                    <div class="code-block glass-card-mini">
+                        <pre><code>// Promise
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve('Data loaded'), 1000);
+    });
+}
+
+// Async/Await
+async function getData() {
+    try {
+        const data = await fetchData();
+        console.log(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}</code></pre>
+                    </div>
+
+                    <h2>5. Spread and Rest Operators</h2>
+                    <p>
+                        The spread (<code>...</code>) and rest operators provide powerful ways to work with arrays and
+                        objects.
+                        They make copying, merging, and extracting data much simpler.
+                    </p>
+                    <div class="code-block glass-card-mini">
+                        <pre><code>// Spread operator
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 }; // { a: 1, b: 2, c: 3 }
+
+// Rest operator
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+console.log(sum(1, 2, 3, 4)); // 10</code></pre>
+                    </div>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        These ES6+ features are just the beginning of modern JavaScript. Mastering them will make your
+                        code
+                        more concise, readable, and maintainable. As you continue your journey, explore additional
+                        features
+                        like modules, classes, and new array/object methods to level up your JavaScript skills.
+                    </p>
+
+                    <div class="post-tags">
+                        <span class="tag"><i class="fas fa-tag"></i> JavaScript</span>
+                        <span class="tag"><i class="fas fa-tag"></i> ES6</span>
+                        <span class="tag"><i class="fas fa-tag"></i> Web Development</span>
+                        <span class="tag"><i class="fas fa-tag"></i> Programming</span>
+                    </div>
+                </div>
+
+                <!-- Post Footer -->
+                <div class="post-detail-footer">
+                    <div class="post-share">
+                        <h4>Share this article</h4>
+                        <div class="share-buttons">
+                            <a href="https://twitter.com/intent/tweet?text=Modern%20JavaScript%20ES6%2B%20Features%20You%20Should%20Know&url=https://codewithdisloyal.com/post-detail.html" target="_blank" class="share-btn twitter" title="Share on Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://codewithdisloyal.com/post-detail.html" target="_blank" class="share-btn facebook" title="Share on Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://codewithdisloyal.com/post-detail.html" target="_blank" class="share-btn linkedin" title="Share on LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="javascript:void(0);" onclick="copyToClipboard()" class="share-btn copy" title="Copy link">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Author Box -->
+            <div class="author-box glass-card">
+                <div class="author-box-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="author-box-content">
+                    <h3>About Disloyal</h3>
+                    <p>
+                        Full Stack Web Developer passionate about creating exceptional digital experiences.
+                        Specializing in modern web technologies and helping developers level up their skills
+                        through practical tutorials and insights.
+                    </p>
+                    <div class="author-social">
+                        <a href="https://www.facebook.com/THE.TOPER.DEVINE/" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://x.com/MrDisloyalDev" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/codewithdisloyal/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@DisloyalFutures" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Posts -->
+            <div class="related-posts">
+                <h3>Related Articles</h3>
+                <div class="related-posts-grid">
+                    <article class="related-post-card glass-card">
+                        <div class="related-post-image">
+                            <div class="post-category-badge">React</div>
+                            <div class="post-image-placeholder">
+                                <i class="fab fa-react"></i>
+                            </div>
+                        </div>
+                        <div class="related-post-content">
+                            <h4>Building Scalable React Applications</h4>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> Nov 28, 2025</span>
+                            </div>
+                            <a href="post-detail.html" class="read-more-link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="related-post-card glass-card">
+                        <div class="related-post-image">
+                            <div class="post-category-badge">Node.js</div>
+                            <div class="post-image-placeholder">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                        </div>
+                        <div class="related-post-content">
+                            <h4>RESTful API Design Best Practices</h4>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> Nov 25, 2025</span>
+                            </div>
+                            <a href="post-detail.html" class="read-more-link">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Code With Disloyal. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a target="_blank" href="https://www.facebook.com/THE.TOPER.DEVINE/"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a target="_blank" href="https://x.com/MrDisloyalDev"><i class="fa-brands fa-twitter"></i></a>
+            <a target="_blank" href="https://www.instagram.com/codewithdisloyal/"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@DisloyalFutures"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+    <script src="js/theme.js"></script>
+    <script>
+        // Copy current page URL to clipboard
+        function copyToClipboard() {
+            const url = window.location.href;
+            
+            // Modern clipboard API
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(function() {
+                    const copyBtn = document.querySelector('.share-btn.copy');
+                    const originalIcon = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+                    copyBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                    setTimeout(function() {
+                        copyBtn.innerHTML = originalIcon;
+                        copyBtn.style.background = '';
+                    }, 2000);
+                }).catch(function(err) {
+                    alert('Failed to copy link. Please try again.');
+                });
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = url;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const copyBtn = document.querySelector('.share-btn.copy');
+                    const originalIcon = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+                    copyBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                    setTimeout(function() {
+                        copyBtn.innerHTML = originalIcon;
+                        copyBtn.style.background = '';
+                    }, 2000);
+                } catch (err) {
+                    alert('Failed to copy link. Please try again.');
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+    </script>
+</body>
+
+</html>

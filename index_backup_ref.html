@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Code With Disloyal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-pra">&lt;/&gt; Code With</span><span class="logo-roz"> Disloyal</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Type to Search">
+            <div class="search-suggestions" style="display: none;"></div>
+            <button>Search</button>
+            <button id="theme-toggle" style="margin-left: 10px; border-radius: 4px;"><i
+                    class="fa-solid fa-moon"></i></button>
+        </div>
+    </header>
+
+    <!-- Blog Page -->
+    <section class="blog-page">
+        <div class="blog-container">
+            <!-- Blog Header -->
+            <div class="blog-page-header">
+                <h1>Latest <span class="highlight-text">Articles</span></h1>
+                <p class="blog-subtitle">Explore tutorials, tips, and insights on web development</p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="blog-filter-section">
+                <div class="filter-dropdown">
+                    <button class="filter-btn" id="categoryBtn">
+                        <i class="fas fa-filter"></i>
+                        <span id="selectedCategory">All Categories</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" id="categoryDropdown">
+                        <div class="dropdown-item active" data-category="all">
+                            <i class="fas fa-th"></i>
+                            All Categories
+                        </div>
+                        <div class="dropdown-item" data-category="javascript">
+                            <i class="fab fa-js"></i>
+                            JavaScript
+                        </div>
+                        <div class="dropdown-item" data-category="react">
+                            <i class="fab fa-react"></i>
+                            React
+                        </div>
+                        <div class="dropdown-item" data-category="nodejs">
+                            <i class="fab fa-node-js"></i>
+                            Node.js
+                        </div>
+                        <div class="dropdown-item" data-category="css">
+                            <i class="fab fa-css3-alt"></i>
+                            CSS & Design
+                        </div>
+                        <div class="dropdown-item" data-category="python">
+                            <i class="fab fa-python"></i>
+                            Python
+                        </div>
+                        <div class="dropdown-item" data-category="webdev">
+                            <i class="fas fa-code"></i>
+                            Web Development
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-count">
+                    <span id="articleCount">12</span> Articles Found
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-posts-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-post-card glass-card" data-category="javascript">
+                    <div class="post-image">
+                        <div class="post-category-badge">JavaScript</div>
+                        <div class="post-image-placeholder">
+                            <i class="fab fa-js"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Dec 1, 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3 class="post-title">Modern JavaScript ES6+ Features You Should Know</h3>
+                        <p class="post-excerpt">Discover the essential ES6+ features that will transform your JavaScript
+                            code and make you a more efficient developer.</p>
+                        <div class="post-footer">
+                            <div class="post-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span>Disloyal</span>
+                            </div>
+                            <a href="post-detail.html" class="read-more-btn">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-post-card glass-card" data-category="react">
+                    <div class="post-image">
+                        <div class="post-category-badge">React</div>
+                        <div class="post-image-placeholder">
+                            <i class="fab fa-react"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Nov 28, 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3 class="post-title">Building Scalable React Applications in 2025</h3>
+                        <p class="post-excerpt">Learn the best practices and patterns for building large-scale React
+                            applications with modern tooling and architecture.</p>
+                        <div class="post-footer">
+                            <div class="post-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span>Disloyal</span>
+                            </div>
+                            <a href="post-detail.html" class="read-more-btn">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-post-card glass-card" data-category="nodejs">
+                    <div class="post-image">
+                        <div class="post-category-badge">Node.js</div>
+                        <div class="post-image-placeholder">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Nov 25, 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <h3 class="post-title">RESTful API Design Best Practices with Node.js</h3>
+                        <p class="post-excerpt">Master the art of designing clean, efficient, and scalable RESTful APIs
+                            using Node.js and Express framework.</p>
+                        <div class="post-footer">
+                            <div class="post-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span>Disloyal</span>
+                            </div>
+                            <a href="post-detail.html" class="read-more-btn">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-post-card glass-card" data-category="css">
+                    <div class="post-image">
+                        <div class="post-category-badge">CSS & Design</div>
+                        <div class="post-image-placeholder">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Nov 22, 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3 class="post-title">Creating Stunning Glassmorphism UI Effects</h3>
+                        <p class="post-excerpt">Step-by-step guide to implementing the trending glassmorphism design
+                            style
+                            with CSS and creating modern, elegant interfaces.</p>
+                        <div class="post-footer">
+                            <div class="post-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span>Disloyal</span>
+                            </div>
+                            <a href="post-detail.html" class="read-more-btn">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-post-card glass-card" data-category="python">
+                    <div class="post-image">
+                        <div class="post-category-badge">Python</div>
+                        <div class="post-image-placeholder">
+                            <i class="fab fa-python"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Nov 20, 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3 class="post-title">Python for Web Development: Django vs Flask</h3>
+                        <p class="post-excerpt">A comprehensive comparison of Django and Flask frameworks to help you
+                            choose
+                            the right tool for your next Python web project.</p>
+                        <div class="post-footer">
+                            <div class="post-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span>Disloyal</span>
+                            </div>
+                            <a href="post-detail.html" class="read-more-btn">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-post-card glass-card" data-category="webdev">
+                    <div class="post-image">
+                        <div class="post-category-badge">Web Development</div>
+                        <div class="post-image-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> Nov 18, 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 12 min read</span>
+                        </div>
+                        <h3 class="post-title">Complete Guide to Web Performance Optimization</h3>
+                        <p class="post-excerpt">Boost your website's speed and performance with these proven techniques
+                            for
+                            optimization, from lazy loading to code splitting.</p>
+                        <div class="post-footer">
+                            <div class="post-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span>Disloyal</span>
+                            </div>
+                            <a href="post-detail.html" class="read-more-btn">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Code With Disloyal. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a target="_blank" href="https://www.facebook.com/THE.TOPER.DEVINE/"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a target="_blank" href="https://x.com/MrDisloyalDev"><i class="fa-brands fa-twitter"></i></a>
+            <a target="_blank" href="https://www.instagram.com/codewithdisloyal/"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@DisloyalFutures"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/blog-filter.js"></script>
+</body>
+
+</html>
